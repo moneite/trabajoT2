@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina:
+autor: Carlos Boni
+fecha: Marzo 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>ActualidadARCOS - Todo sobre la "actualidad"</title>
+
+    <!-- una fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <link href="./css/index.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- solo aquellos estilos que solo aplican a esta pagina -->
+
+
+    <!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./media/icono.PNG" />
+
+
+
+</head>
+
+
+<body>
+
+    <div class="marco">
+
+        <header class="encabezado">
+            <nav nav aria-label class="navbar">
+                <a href="index.html"><img class="logoWeb" src="./media/noticias.png" alt="Logo de la web de noticias" height="30px"></a>
+                </a>
+                <a class="actualidadmenusup" href="index.html">Inicio</a>
+                <a href="actualidad.html">Actualidad</a>
+                <a href="#Blog" onclick="actualizar()">Blog</a>
+                <a href="#Tendencias" onclick="actualizar()">Tendencias</a>
+                <a href="#Contactar" onclick="actualizar()">Contactar</a>
+
+                <div id="alerta"> </div>
+
+            </nav>
+            <div class="migas">
+                <ul class="breadcrumb">
+                    <li>
+                        <a class="actualidadmenu" href="index.html"> <span id="bc"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="lado">
+            <aside class="menulateral">
+                <ul>
+                    <li><a class="actualidadmenulateral" href="index.html">Inicio</a></li>
+                    <li><a href="actualidad.html">Actualidad</a></li>
+                    <li><a href="#Blog" onclick="actualizar()">Blog</a></li>
+                    <li><a href="#Tendencias" onclick="actualizar()">Tendencias</a></li>
+                    <li><a href="#Contactar" onclick="actualizar()">Contactar</a></li>
+
+                </ul>
+            </aside>
+        </div>
+        <main class="contenido">
+            <a href="https://www.linkedin.com/in/miguel-%C3%A1ngel-arcos-reyes-a2b871b5/" target="_blank">
+                <img class="nombre" src="./media/nombre.png" alt="Imagen con el nombre del alumno" width="100%" height="auto">
+            </a>
+            <div class="conjunto">
+                <div class="yo">
+                    <a href="https://www.linkedin.com/in/miguel-%C3%A1ngel-arcos-reyes-a2b871b5/" target="_blank">
+                        <img id="foto" src="./media/MiguelAngel.png" alt="Foto del alumno" width="90%" height="auto"></a>
+                </div>
+                <div class="texto">
+                    <h1>SOBRE MÍ</h1>
+                    <p>Elegí estudiar <span class=negrita>DAM</span> porque la programación siempre ha sido algo que me ha atraído a lo largo de mi vida. De hecho, antes de entrar a estudiar Comunicación Audiovisual, que es mi carrera actual, estudié unos
+                        años Telecomunicaciones y desde ese momento se me quedó la espinita clavada de aprender a programar. </br>
+                        Preferí elegir DAM por encima de DAW porque me atrae más la <span class=negrita>resolución lógica</span> que a veces se lleva a cabo programando y que en DAW es algo diferente. Aunque, por otra parte, el <span class=negrita>diseño gráfico</span>                        es uno de los campos donde me he especializado tras estudiar mi Grado Universitario, por lo que no descarto estudiar DAW una vez que finalice DAM.
+                        </br>
+
+                        </br>Actualmente estoy estudiando en <span class=negrita>CENEC</span> que es un centro de Formación Privada Oficial especializado en Técnologías de la Información e Informática. Además, son el primer Centro de Andalucía que pertenece
+                        a la red de excelencia de Centros de Fromación Profesional de <span class=negrita>INDRA</span>.
+
+                    </p>
+                </div>
+
+            </div>
+
+        </main>
+        <footer class="pie">
+            <div class="logo">
+                <a href="https://www.cenecmalaga.es/" target="_blank"><img src="./media/logo.png" alt="Logo de Cenec" width="auto" height="30px"></a>
+            </div>
+            <div class="contactar">
+                <p> Contacto: <a href="mailto:emailinventado@gmail.com"> emailinventado@gmail.com</a> <span class="copy">   © 2021</span> </p>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

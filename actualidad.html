@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina:
+autor: Carlos Boni
+fecha: Marzo 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>ActualidadARCOS - Todo sobre la "actualidad"</title>
+
+    <!-- una fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <!-- una hoja de estilos externa-->
+
+    <!-- una hoja de estilos personalizada-->
+    <link href="00-modelo.css" rel="stylesheet" />
+
+    <!-- iconos u otros elementos externos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="./media/icono.PNG" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .marco {
+            display: grid;
+            border-style: none;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 50px 40px auto 40px;
+            grid-gap: 0px;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .encabezado {
+            border-style: hidden;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 1;
+        }
+        
+        .migas {
+            border-style: hidden;
+            border-color: yellow;
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+        }
+        
+        .lado {
+            border-style: hidden;
+            border-color: violet;
+            grid-column: 1 / span 1;
+            grid-row: 3 / span 1;
+            background-color: #333;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        
+        .contenido {
+            border-style: hidden;
+            border-color: violet;
+            grid-column: 2 / span 1;
+            grid-row: 3 / span 1;
+            overflow-x: auto;
+        }
+        
+        .pie {
+            border-style: hidden;
+            border-color: aqua;
+            grid-column: 1 / span 2;
+            grid-row: 4 / span 1;
+        }
+        
+        body {
+            background-color: rgba(0, 0, 128, 0.1);
+            /* Azul al 10% */
+            margin: 0px;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        a:link {
+            color: white;
+        }
+        
+        .navbar {
+            height: 100%;
+            overflow: hidden;
+            background-color: #f5f8fa;
+            vertical-align: auto;
+        }
+        
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover {
+            background-color: #00a4bd;
+            height: 100%;
+            font-weight: bold;
+            color: white;
+            text-decoration: overline;
+            font-size: larger;
+        }
+        
+        .logoWeb:hover {
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+        }
+        
+        #alerta {
+            color: black;
+            float: right;
+            font-size: 16px;
+            padding: 14px 16px;
+            text-decoration: none;
+            padding: 14px 16px;
+            font-style: oblique;
+        }
+        
+        .menulateral {
+            padding-top: 8px;
+            height: 100%;
+            vertical-align: auto;
+        }
+        
+        .menulateral a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            padding: 0px 10px;
+        }
+        
+        .menulateral a:hover {
+            background-color: red;
+            color: white;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .pie {
+            background-color: #283446;
+            color: #dedfde;
+        }
+        
+        .pie p {
+            text-align: right;
+            font-weight: bold;
+            padding-top: 2px;
+            padding-right: 4px;
+        }
+        
+        .copy {
+            font-weight: lighter;
+            font-size: smaller;
+        }
+        
+        .logo {
+            float: left;
+            padding-top: 4px;
+            padding-left: 5px;
+        }
+        
+        .contactar {
+            float: right;
+            padding-top: 5px;
+        }
+        
+        ul.breadcrumb {
+            padding: 8px 16px;
+            list-style: none;
+            background-color: #ff7a59;
+        }
+        
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+        
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: #f3baba;
+            content: "/\00a0";
+        }
+        
+        ul.breadcrumb li a {
+            color: #ffffff;
+            text-shadow: 3px 3px 3px black;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+        
+        ul.breadcrumb li a:hover {
+            color: black;
+            text-decoration: underline;
+            text-shadow: none;
+        }
+        
+        main {
+            padding-left: 0.5%;
+            padding-right: 0.5%;
+        }
+        
+        .titular {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 5px;
+            padding: 3%;
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        .derecha {
+            float: right;
+            width: 40%;
+            padding-left: 15px;
+        }
+        
+        .izquierda {
+            float: left;
+            width: 30%;
+            padding: 15px;
+        }
+        
+        .conjunto {
+            padding-top: 20px;
+            margin-right: 20px;
+        }
+        
+        .navbar a:active {
+            color: red;
+        }
+        
+        p {
+            text-align: justify;
+            font-size: 20px;
+            margin-top: 4px;
+        }
+        
+        .negrita {
+            font-weight: bolder;
+        }
+        
+        blockquote {
+            font-weight: bolder;
+            font-size: 20px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            padding-left: 40px;
+            font-style: italic;
+        }
+        
+        .opinion {
+            width: 20%;
+        }
+        
+        hr.separador {
+            border: 2px solid black;
+        }
+        
+        .breadcrumb .actualidadmenu {
+            color: black;
+            text-shadow: none;
+        }
+        
+        .navbar .actualidadmenusup {
+            background-color: #00616E;
+            height: 100%;
+            font-weight: bold;
+            color: white;
+            text-decoration: overline;
+            font-size: larger;
+        }
+        
+        .menulateral .actualidadmenulateral {
+            background-color: #BE0000;
+            color: white;
+            height: 100%;
+            width: 100%;
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        ul.lista {
+            font-size: 20px;
+            padding-left: 4%;
+            list-style-type: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .titulolista {
+            text-align: center;
+        }
+        
+        .listatotal {
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 4px solid #f3baba;
+            margin-bottom: 5px;
+        }
+        
+        .videoimagen {
+            width: 40%;
+            margin-left: 30%;
+            margin-right: auto;
+        }
+        
+        .video {
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            position: relative;
+        }
+        
+        iframe {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        
+        .reduccion {
+            width: 40%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 2%;
+        }
+    </style>
+
+    <!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+</head>
+
+
+<body>
+
+    <div class="marco">
+        <header class="encabezado">
+            <nav nav aria-label class="navbar">
+                <a href="index.html"><img class="logoWeb" src="./media/noticias.png" alt="Logo de la web de noticias" height="30px"></a>
+                </a>
+                <a href="index.html">Inicio</a>
+                <a class="actualidadmenusup" href="actualidad.html">Actualidad</a>
+                <a href="#Blog" onclick="actualizar()">Blog</a>
+                <a href="#Tendencias" onclick="actualizar()">Tendencias</a>
+                <a href="#Contactar" onclick="actualizar()">Contactar</a>
+
+                <div id="alerta"> </div>
+
+            </nav>
+            <div class="migas">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="index.html"> <span id="bc"></span></a>
+                    </li>
+                    <li>
+                        <a class="actualidadmenu" href="actualidad.html"> <span id="bc2"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="lado">
+            <aside aria-label class="menulateral">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a class="actualidadmenulateral" href="actualidad.html">Actualidad</a></li>
+                    <li><a href="#Blog" onclick="actualizar()">Blog</a></li>
+                    <li><a href="#Tendencias" onclick="actualizar()">Tendencias</a></li>
+                    <li><a href="#Contactar" onclick="actualizar()">Contactar</a></li>
+
+
+
+                </ul>
+            </aside>
+        </div>
+        <main class="contenido">
+            <h1 class="titular">Los píxeles espía o la forma que tienen las empresas de acceder a tu información privada.</h1>
+            <h2>Incluso aunque marquemos nuestros correos como spam, esta técnica seguiría siendo efectiva.</h2>
+            <article>
+                <div class="conjunto">
+                    <img class="derecha" alt="Fotografía de persona comprobando el email" src="./media/email.jpeg" />
+                    <p>Una de las utilidades de los
+                        <span class="negrita">píxeles espías</span> es comprobar si se abrió un email, además del momento y el lugar de su apertura. De esta forma las empresas pueden medir la efectividad de una campaña y enriquecerse con los datos del
+                        cliente.
+                    </p>
+                    <p>Hay quienes defienden está técnica como una <span class="negrita">táctica de mercado</span> y muchas de las empresas que lo utilizan se justifican indicando que el uso de esta tecnolgía es mencionado en sus políticas de privacidad.</p>
+                    <p>Además, el informe elaborado por Hey, grandes marcas y compañías como pueden ser British Airways o Unilever usan estos píxeles.</p><br>
+                    <p>David Heinemeier Hansson, fundador de Hey, compañía que ha elaborado este informe sobre los píxeles espía indica que:</p>
+                    </br>
+                    <blockquote cite="https://www.bbc.com/news/technology-56071437">
+                        «En promedio, cada cliente de Hey
+                        </br> recibe 24 correos por día que intentan espiarlos»
+                    </blockquote>
+                    </br>
+                    <div class="listatotal">
+                        <p class="titulolista">Los emails con píxeles espías se utilizan para: </p>
+                        <ul class="lista">
+                            <br>
+                            <li>- Comprobar si un email fue abierto y cuándo.</li><br>
+                            <li>- Comprobar cuantas veces fue abierto.</li><br>
+                            <li>- Qué dispoitivo fue utilizado para abrirlo.</li><br>
+                        </ul>
+                    </div>
+                    <hr class="separador">
+
+                    <div> <img class="opinion" alt="separador de secciones" src="./media/opinion.png" /></div>
+                    <p>En la actualidad el uso de las tecnologías para cualquier labor cotidiana es imprescindible, como en este caso, el uso del correo electrónico. Por lo que es de vital importancia prestar atención a la procedencia de los correos que
+                        recibimos antes de abrirlos y tener en cuenta si son de procedencia real o son una suplantación de identidad de la empresa. Para evitar estos emails con pixeles espía de forma no deseada deberíamos quizás que leer la política de
+                        privacidad de aquellas empresas de las cuales deseamos leer sus emails.</p>
+                    <p>Es cierto que la seguridad informática es un tema que poco a poco se está consiguiendo legalizar cada vez más. El caso más importante es el que se dio en cuanto a la ley de Protección de datos de 2018.</p>
+                    <p>Habría que comprobar hasta que punto se cumple dicha normativa impuesta a nivel Europeo hace unos años, ya que si no cumple los estándares, podría considerarse una mala regulación de la protección de cara al usuario.</p>
+                    <div> <img class="videoimagen" alt="separador del video" src="./media/video.png" /></div>
+                    <div class="reduccion">
+                        <div class=video>
+                            <iframe src="https://www.youtube.com/embed/rrAjCHm7qRU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+        </main>
+
+        <footer class="pie ">
+            <div class="logo ">
+                <a href="https://www.cenecmalaga.es/ " target="_blank "><img src="./media/logo.png " alt="Logo de Cenec " width="auto " height="30px "></a>
+            </div>
+            <div class="contactar ">
+                <p> Contacto: <a href="mailto:emailinventado@gmail.com "> emailinventado@gmail.com</a> <span class="copy ">   © 2021</span> </p>
+            </div>
+
+        </footer>
+    </div>
+
+    <script>
+        actualizar();
+
+        function actualizar() {
+            if (sessionStorage.contador) {
+                sessionStorage.contador = Number(sessionStorage.contador) + 1;
+            } else {
+                sessionStorage.setItem("contador ", 1);
+            }
+            $("#alerta ").text('Has visitado ' + sessionStorage.contador + ' páginas.')
+        }
+
+        $("#bc ").text("Inicio ");
+        $("#bc2 ").text("Actualidad ");
+    </script>
+
+</body>
+
+</html>

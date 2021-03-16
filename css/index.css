@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.marco {
+    display: grid;
+    border-style: none;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 50px 40px auto 40px;
+    grid-gap: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.encabezado {
+    border-style: hidden;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.migas {
+    border-style: hidden;
+    border-color: yellow;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+}
+
+.lado {
+    border-style: hidden;
+    border-color: violet;
+    grid-column: 1 / span 1;
+    background-color: #333;
+    grid-row: 3 / span 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.contenido {
+    border-style: hidden;
+    border-color: violet;
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.pie {
+    border-style: hidden;
+    border-color: aqua;
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+}
+
+body {
+    background-color: rgba(0, 0, 128, 0.1);
+    /* Azul al 10% */
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+a:link {
+    color: white;
+}
+
+.navbar {
+    height: 100%;
+    overflow: hidden;
+    background-color: #f5f8fa;
+    vertical-align: auto;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #00a4bd;
+    height: 100%;
+    font-weight: bold;
+    color: white;
+    text-decoration: overline;
+    font-size: larger;
+}
+
+.navbar a:active {
+    color: red;
+}
+
+.logoWeb:hover {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+#alerta {
+    color: black;
+    float: right;
+    font-size: 16px;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-style: oblique;
+}
+
+.menulateral {
+    padding-top: 8px;
+    height: 100%;
+    vertical-align: auto;
+}
+
+.menulateral a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+}
+
+.menulateral a:hover {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pie {
+    background-color: #283446;
+    color: #dedfde;
+}
+
+.pie p {
+    text-align: right;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-right: 4px;
+}
+
+.copy {
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.logo {
+    float: left;
+    padding-top: 4px;
+    padding-left: 5px;
+}
+
+.contactar {
+    float: right;
+    padding-top: 5px;
+}
+
+ul.breadcrumb {
+    padding: 8px 16px;
+    list-style: none;
+    background-color: #ff7a59;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #f3baba;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #ffffff;
+    text-shadow: 3px 3px 3px black;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: black;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+.nombre {
+    margin-top: 10px;
+}
+
+.nombre:hover {
+    transform: scale(1.05);
+}
+
+.conjunto {
+    padding-top: 20px;
+    padding-bottom: 3%;
+    display: flex;
+}
+
+.yo {
+    float: left;
+    width: 50%;
+    border-right: #f3baba solid;
+}
+
+#foto:hover {
+    transform: scale(1.05);
+}
+
+.conjunto img {
+    padding-left: 20%;
+    padding-top: 15%;
+}
+
+.texto {
+    width: auto;
+    padding-left: 5px;
+}
+
+.h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+}
+
+.texto p {
+    font-weight: normal;
+    font-size: 20px;
+    padding-right: 12px;
+    text-align: justify;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.menulateral .actualidadmenulateral {
+    background-color: #BE0000;
+    color: white;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    font-weight: bold;
+}
+
+.navbar .actualidadmenusup {
+    background-color: #00616E;
+    height: 100%;
+    font-weight: bold;
+    color: white;
+    text-decoration: overline;
+    font-size: larger;
+}
+
+.breadcrumb .actualidadmenu {
+    color: black;
+    text-shadow: none;
+}
